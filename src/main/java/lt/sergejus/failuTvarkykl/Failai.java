@@ -6,7 +6,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Failai {
     public static void main (String[] args){
@@ -41,6 +43,26 @@ public class Failai {
             throw new RuntimeException(e);
         }
 
+        List<String> textEilutes= new ArrayList<>();
+        try {
+            textEilutes = Files.readAllLines(antrPath);
+            textEilutes.forEach(System.out::println);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+          boolean arFilIstrintas = Files.deleteIfExists(antrPath);
+            System.out.println(arFilIstrintas ? "failas 2.txt buvo istrintas" : "nebuvo istrintas");
+
+            arFilIstrintas = Files.deleteIfExists(pirmPath);
+            System.out.println(arFilIstrintas ? "1 fialas istrints" : "neistrints 1 failas");
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 

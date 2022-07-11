@@ -30,7 +30,7 @@ public class Imone {
     }
 
 
-    public void pridekDarbuotoja(Darbuotojas worker, String pareigos, int stazas) {
+    public void pridekDarbuotoja(Darbuotojas worker, Pareigos pareigos, int stazas) {
         this.darbuotojai.add(worker);
         darbuotojai.size();
         worker.setPareigos(pareigos);

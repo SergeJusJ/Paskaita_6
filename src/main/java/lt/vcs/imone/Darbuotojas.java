@@ -7,7 +7,7 @@ public class Darbuotojas {
     private String pavarde;
     private String asmensKodas;
     private int amzius;
-    private String pareigos;
+    private Pareigos pareigos;
     private int stazas;
 
     public Darbuotojas(String vardas, String pavarde, String asmensKodas) {
@@ -34,7 +34,7 @@ public class Darbuotojas {
         return amzius;
     }
 
-    public String getPareigos() {
+    public Pareigos getPareigos() {
         return pareigos;
     }
 
@@ -43,7 +43,7 @@ public class Darbuotojas {
     }
 
 
-    public void setPareigos(String pareigos) {
+    public void setPareigos(Pareigos pareigos) {
         this.pareigos = pareigos;
     }
 

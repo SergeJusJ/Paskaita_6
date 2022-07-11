@@ -1,5 +1,7 @@
 package lt.vcs.imone;
 
+
+
 public class Main {
     public static void main(String[] args) {
 
@@ -30,17 +32,22 @@ public class Main {
     darb2.spausdDarbInfo();
 
 
-        imone.pridekDarbuotoja(darb1, "Direktorius", 80);
-        imone.pridekDarbuotoja(darb2, "Vadybininkas", 2 );
-        imone.pridekDarbuotoja(darb3,"Sekretore", 20);
-        imone.pridekDarbuotoja(darb4, "Vadybininkasa", 15);
-        imone.pridekDarbuotoja(darb5, "Vadybinninkas", 20);
+        imone.pridekDarbuotoja(darb1, Pareigos.DIREKTR, 80);
+        imone.pridekDarbuotoja(darb2, Pareigos.PAVADUOTOJAS, 2 );
+        imone.pridekDarbuotoja(darb3,Pareigos.SEKRETORE, 20);
+        imone.pridekDarbuotoja(darb4, Pareigos.VADYBININKAS, 15);
+        imone.pridekDarbuotoja(darb5, Pareigos.VADYBININKAS, 20);
 
 imone.getDarbuotojai().forEach(drb -> drb.spausdDarbInfo());
         System.out.println("-----------------------------------------------");
 imone.filtDrb(8);
+//spausdink("valio");
+//spausdink(0.66);
 
 
 
-    }
+        }
+//    public static <T> void spausdink (T kintamas){
+//        System.out.println(kintamas.getClass().getTypeName()+"/"+ kintamas);
+//    }
 }
