@@ -30,8 +30,18 @@ public class Imone {
     }
 
 
-    public void pridekDarbuotoja(Darbuotojas darbuotojas) {
-        this.darbuotojai.add(darbuotojas);
+    public void pridekDarbuotoja(Darbuotojas worker, String pareigos, int stazas) {
+        this.darbuotojai.add(worker);
         darbuotojai.size();
+        worker.setPareigos(pareigos);
+        worker.setStazas(stazas);
     }
+
+    public void filtDrb(int stazas) {
+        System.out.println("filrDarbSarasas su stazu > : " + stazas);
+        darbuotojai.forEach(darb -> {if (darb.getStazas() >= stazas) darb.spausdDarbInfo();} );
+    }
+
+
+
 }
