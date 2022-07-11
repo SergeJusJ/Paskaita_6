@@ -29,6 +29,19 @@ public class Failai {
             e.printStackTrace();
         }
 
+        String antrDir="C:\\Users\\MARTIN\\IdeaProjects\\7_paskaita\\2test.txt";
+
+        Path antrPath = Paths.get(antrDir);
+
+        try {
+            Files.copy(pirmPath,antrPath);
+            System.out.println("Text buvo nukopijuotas");
+        } catch (IOException e) {
+            System.out.println("Klaida kopijuojant faila...");
+            throw new RuntimeException(e);
+        }
+
+
     }
 
 
